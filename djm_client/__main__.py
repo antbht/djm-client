@@ -1,6 +1,7 @@
 import argparse
 
 from djm_client import client
+import djm_sdk.api
 
 
 def main():
@@ -12,8 +13,8 @@ def main():
     api_ip = args.host
     port = args.port
 
-
-    app = client.MainCmdLine()
+    api = djm_sdk.api.API(api_ip, port)
+    app = client.MainCmdLine(api)
     app.cmdloop()
 
     
