@@ -11,6 +11,7 @@ setup(
     license='MIT',
     packages=find_packages(exclude=['unit_tests',]),
     install_requires=[
+        "djm-sdk"
     ],
     entry_points={
         'console_scripts': [

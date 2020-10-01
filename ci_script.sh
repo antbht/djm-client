@@ -5,11 +5,6 @@ init() {
     source bin/activate
 }
 
-unit_tests() {
-    echo "Run unit tests ..."
-    python -m unittest unit_tests/*py
-}
-
 dist() {
     echo "Build the wheel ..."
     python setup.py bdist_wheel
@@ -20,9 +15,6 @@ deploy() {
     pip install -e .
 }
 
-quality() {
-    
-}
 
 check_exec() {
     if [ $1 != '0' ]; then
@@ -35,11 +27,7 @@ check_exec() {
 
 init
 check_exec $?
-unit_tests
-check_exec $?
 dist
 check_exec $?
 deploy 
-check_exec $?
-quality
 check_exec $?

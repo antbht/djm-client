@@ -1,0 +1,7 @@
+certifi==2020.6.20
+chardet==3.0.4
+# Editable Git install with no remote (djm-client==0.0.1)
+-e git+https://github.com/antbht/djm_sdk.git@41dc28ce4fd810c30cd8f01f9cd206ede1809275#egg=djm_sdk
+idna==2.10
+requests==2.24.0
+urllib3==1.25.10
